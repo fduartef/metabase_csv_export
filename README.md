@@ -2,7 +2,7 @@
 
 Using selenium and Firefox Driver, this script finds a metabase question, logs in and downloads it's results as an CSV file. 
 
-After that, it renamgit es the last downloaded file on the destination folder to the question number.
+After that, it renames the last downloaded file on the destination folder to the question number.
 
 Usage:
 
