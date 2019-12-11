@@ -4,6 +4,7 @@ import argparse
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from pyvirtualdisplay import Display
 import os
 import glob
 
@@ -65,6 +66,11 @@ def main():
     print('Destination folder set to '+args.destination)
 
 
+    display = Display(visible=0, size=(1024, 768))
+    display.start()
+
+    print('Started virtual display')
+
     browser = webdriver.Firefox(profile)
 
 
@@ -106,6 +112,10 @@ def main():
     print('Finished..')
 
     browser.quit()
+
+
+    display.stop()
+
 
     rename_file(args.destination,args.questionurl)
 
